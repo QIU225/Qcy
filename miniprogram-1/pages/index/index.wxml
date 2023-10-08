@@ -1,0 +1,40 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <view class="info">
+    <text>{{result}}</text>
+  </view>
+  <view class="op">
+    {{num1}}{{op}}{{numStr}}
+  </view>
+  <view class="buttons">
+    <view>
+      <view bindtap="op" data-op="^">^</view>
+      <view bindtap="op" data-op="sin">sin</view>
+      <view bindtap="op" data-op="cos">cos</view>
+      <view bindtap="op" data-op="tan">tan</view>
+    </view>
+    <view>
+      <view bindtap="clear">AC</view>
+      <view bindtap="del">DEL</view>
+      <view bindtap="percent">%</view>
+      <view bindtap="op" data-op="÷">÷</view>
+    </view>
+    <view>
+      <view wx:for="{{[7, 8, 9]}}" bindtap="numBtn" data-num="{{item}}">{{item}}</view>
+      <view bindtap="op" data-op="×">×</view>
+    </view>
+    <view>
+      <view wx:for="{{[4, 5, 6]}}" bindtap="numBtn" data-num="{{item}}">{{item}}</view>
+      <view bindtap="op" data-op="-">-</view>
+    </view>
+    <view>
+      <view wx:for="{{[1, 2, 3]}}" bindtap="numBtn" data-num="{{item}}">{{item}}</view>
+      <view bindtap="op" data-op="+">+</view>
+    </view>
+    <view>
+      <view style="flex: 2" bindtap="numBtn" data-num="0">0</view>
+      <view bindtap="dot">.</view>
+      <view bindtap="cal" data-op="equals">=</view>
+    </view>
+  </view>
+</view>
